@@ -1,0 +1,20 @@
+/* h1 {
+    background-color: blueviolet;
+}
+p{
+ background-color: brown;
+ font-size:  50px;
+
+} */
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background: rgb(2,0,36);
+    background: linear-gradient(37deg, rgba(2,0,36,1) 0%, rgba(14,238,63,1) 35%, rgba(0,212,255,1) 100%);
+    background-repeat: no-repeat ;
+    background-size: 100% 100%;
+    
+    
+}

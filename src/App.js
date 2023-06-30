@@ -43,25 +43,30 @@ class App extends Component {
 
   render() {
     const filterdrobots = this.state.robots.filter(robots=> {
-      return robots.name.toLowerCase().includes(this.state.searchfield.toLowerCase())
-  })
-  const filteredemails = this.state.robots.filter(robots=> {
-    return robots.email.toLowerCase().includes(this.state.searchfield.toLowerCase())
-})
-console.log(robots.email)
- const filterdrobos = filterdrobots.concat(filteredemails)
+      const name1=robots.name.toLowerCase().includes(this.state.searchfield.toLowerCase())
+      const  email1=robots.email.toLowerCase().includes(this.state.searchfield.toLowerCase())
+   
+     return (name1||email1)
+      
+    })
+//   const filteredemails = this.state.robots.filter(robots=> {
+//     return robots.email.toLowerCase().includes(this.state.searchfield.toLowerCase())
+// })
+// console.log(robots.email)
+//  const filterdrobos = filterdrobots.concat(filteredemails)
 
   if(this.state.robots.length === 0)  { return  <h1>loading</h1> 
   }  else {return (
     <div className="tc" > 
     <h1 className="f2"> Robofriends </h1>
     <SearchBox  searchchange={this.onsearchchange}/>
-    <Scroll>    <Errorboundry> <Cardlist robots={filterdrobos} /></Errorboundry>       </Scroll>
+    <Scroll>    <Errorboundry> <Cardlist robots={filterdrobots} /></Errorboundry>       </Scroll>
    </div>
 
    )
  }
   
+
 
    
   };
